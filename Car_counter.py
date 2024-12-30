@@ -74,7 +74,7 @@ while True:
         w, h = x2 - x1, y2 - y1
 
         cvzone.cornerRect(img, (x1, y1, w, h), colorR=(255, 255, 0), l=9, rt=2)
-        cvzone.putTextRect(img, f'{class_name} {int(id)}', (max(0, x1), max(35, y1)),
+        cvzone.putTextRect(img, f'{class_name} ', (max(0, x1), max(35, y1)),
                            scale=2, thickness=3, offset=10)
 
         cx, cy = x1+w//2, y1+h//2
@@ -89,6 +89,6 @@ while True:
 
     cv2.imshow("Image", img)
     # cv2.imshow("Image Region", imgRegion)
-    cv2.waitKey(1)
+    cv2.waitKey(0)
 
 
